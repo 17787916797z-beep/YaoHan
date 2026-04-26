@@ -12,28 +12,34 @@
         }
 
         :root {
-            --primary: #7c88ff;
-            --primary-strong: #6366f1;
-            --secondary: #a855f7;
-            --accent: #22d3ee;
+            --primary: #3b5dc9;
+            --primary-strong: #2d4aa8;
+            --secondary: #6b8cff;
+            --accent: #00d4aa;
             --success: #22c55e;
-            --warning: #f59e0b;
+            --warning: #e8a84c;
             --danger: #ef4444;
 
-            --bg: #07111f;
-            --bg-soft: #0b1628;
-            --panel: rgba(11, 22, 40, 0.74);
-            --panel-strong: rgba(15, 23, 42, 0.88);
-            --panel-hover: rgba(18, 31, 54, 0.92);
-            --line: rgba(255, 255, 255, 0.08);
-            --line-strong: rgba(255, 255, 255, 0.14);
+            --yao-indigo: #1a3a6e;
+            --yao-indigo-light: #2d5a9e;
+            --yao-embroidery: #c4a574;
+            --yao-silver: #e8e4e1;
+            --yao-red: #c8302c;
 
-            --text: #f8fbff;
-            --text-soft: #c4d0e5;
-            --text-muted: #8da2bf;
+            --bg: #0a1220;
+            --bg-soft: #0f1a2e;
+            --panel: rgba(26, 58, 110, 0.65);
+            --panel-strong: rgba(45, 90, 158, 0.78);
+            --panel-hover: rgba(45, 90, 158, 0.85);
+            --line: rgba(196, 165, 116, 0.18);
+            --line-strong: rgba(196, 165, 116, 0.35);
 
-            --shadow-lg: 0 20px 60px rgba(2, 8, 23, 0.45);
-            --shadow-md: 0 14px 36px rgba(2, 8, 23, 0.28);
+            --text: #f1f5f9;
+            --text-soft: #cbd5e1;
+            --text-muted: #94a3b8;
+
+            --shadow-lg: 0 25px 70px rgba(26, 58, 110, 0.5);
+            --shadow-md: 0 16px 42px rgba(26, 58, 110, 0.32);
             --radius-xl: 28px;
             --radius-lg: 22px;
             --radius-md: 16px;
@@ -50,36 +56,53 @@
             color: var(--text);
             overflow-x: hidden;
             background:
-                radial-gradient(circle at 15% 20%, rgba(34, 211, 238, 0.18), transparent 28%),
-                radial-gradient(circle at 82% 18%, rgba(168, 85, 247, 0.22), transparent 24%),
-                radial-gradient(circle at 50% 78%, rgba(124, 136, 255, 0.18), transparent 32%),
-                linear-gradient(145deg, #050b16 0%, #0a1324 42%, #10152c 100%);
+                radial-gradient(circle at 15% 20%, rgba(59, 93, 201, 0.15), transparent 28%),
+                radial-gradient(circle at 82% 18%, rgba(107, 140, 255, 0.12), transparent 24%),
+                radial-gradient(circle at 50% 78%, rgba(0, 212, 170, 0.10), transparent 32%),
+                linear-gradient(145deg, #060d1a 0%, #0a1220 42%, #0f1a2e 100%);
+            position: relative;
         }
 
-        body::before,
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(196, 165, 116, 0.02) 35px, rgba(196, 165, 116, 0.02) 36px),
+                repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(196, 165, 116, 0.02) 35px, rgba(196, 165, 116, 0.02) 36px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
         body::after {
             content: "";
             position: fixed;
             inset: auto;
-            width: 420px;
-            height: 420px;
+            width: 480px;
+            height: 480px;
             border-radius: 999px;
-            filter: blur(90px);
+            filter: blur(120px);
             z-index: 0;
             pointer-events: none;
-            opacity: 0.22;
+            opacity: 0.15;
+            right: -150px;
+            bottom: 80px;
+            background: var(--yao-indigo-light);
         }
 
-        body::before {
-            left: -120px;
-            top: 90px;
-            background: #22d3ee;
-        }
-
-        body::after {
-            right: -120px;
-            bottom: 60px;
-            background: #8b5cf6;
+        .yao-pattern {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30L30 0z' fill='none' stroke='%23c4a574' stroke-width='1'/%3E%3Ccircle cx='30' cy='30' r='8' fill='none' stroke='%23c4a574' stroke-width='1'/%3E%3Cpath d='M15 30L45 30M30 15L30 45' stroke='%23c4a574' stroke-width='1'/%3E%3C/svg%3E");
         }
 
         button,
@@ -94,7 +117,49 @@
         }
 
         button:focus-visible {
-            box-shadow: 0 0 0 4px rgba(124, 136, 255, 0.24);
+            box-shadow: 0 0 0 4px rgba(59, 93, 201, 0.24);
+        }
+
+        .yao-border {
+            border: 2px solid var(--yao-embroidery);
+            position: relative;
+        }
+
+        .yao-border::before,
+        .yao-border::after {
+            content: "◆";
+            position: absolute;
+            font-size: 14px;
+            color: var(--yao-embroidery);
+        }
+
+        .yao-border::before {
+            top: -10px;
+            left: 20px;
+        }
+
+        .yao-border::after {
+            top: -10px;
+            right: 20px;
+        }
+
+        .yao-silver-accent {
+            border: 1px solid var(--yao-silver);
+            box-shadow:
+                0 0 0 1px rgba(232, 228, 225, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .yao-totem {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, var(--yao-indigo), var(--yao-indigo-light));
+            border-radius: 4px;
+            color: var(--yao-silver);
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            border: 1px solid var(--yao-embroidery);
+            box-shadow: 0 2px 8px rgba(26, 58, 110, 0.3);
         }
 
         .page {
@@ -116,25 +181,42 @@
         .level-nav,
         .stat-card,
         .chart-container {
-            background: linear-gradient(180deg, rgba(18, 29, 49, 0.84), rgba(10, 18, 32, 0.72));
+            background: linear-gradient(180deg, rgba(26, 58, 110, 0.72), rgba(45, 90, 158, 0.58));
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
             border: 1px solid var(--line);
             box-shadow: var(--shadow-md);
+            position: relative;
+        }
+
+        .glass-panel::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                var(--yao-embroidery) 20%,
+                var(--yao-embroidery) 80%,
+                transparent 100%
+            );
         }
 
         .eyebrow {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 8px 14px;
-            border-radius: 999px;
-            border: 1px solid rgba(124, 136, 255, 0.24);
-            background: rgba(124, 136, 255, 0.12);
-            color: #cdd5ff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: 1px solid var(--yao-embroidery);
+            background: linear-gradient(135deg, var(--yao-indigo), var(--yao-indigo-light));
+            color: var(--yao-silver);
             font-size: 0.86rem;
-            letter-spacing: 0.02em;
+            letter-spacing: 0.1em;
             margin-bottom: 18px;
+            box-shadow: 0 2px 8px rgba(26, 58, 110, 0.3);
         }
 
         .gradient-text {
@@ -146,7 +228,7 @@
 
         .btn {
             border: none;
-            border-radius: 16px;
+            border-radius: 8px;
             padding: 15px 24px;
             font-size: 1rem;
             font-weight: 700;
@@ -157,6 +239,19 @@
             justify-content: center;
             gap: 10px;
             min-height: 54px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.1) 50%, transparent 60%);
+            pointer-events: none;
         }
 
         .btn:hover {
@@ -168,29 +263,30 @@
         }
 
         .btn-primary {
-            color: white;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            box-shadow: 0 16px 35px rgba(110, 97, 255, 0.28);
+            color: var(--yao-silver);
+            background: linear-gradient(135deg, var(--yao-indigo), var(--yao-indigo-light));
+            border: 1px solid var(--yao-embroidery);
+            box-shadow: 0 16px 35px rgba(26, 58, 110, 0.3);
         }
 
         .btn-primary:hover {
-            box-shadow: 0 22px 44px rgba(110, 97, 255, 0.34);
+            box-shadow: 0 22px 44px rgba(26, 58, 110, 0.4);
         }
 
         .btn-secondary {
             color: var(--text);
             border: 1px solid var(--line-strong);
-            background: rgba(255, 255, 255, 0.04);
+            background: rgba(45, 90, 158, 0.08);
         }
 
         .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(45, 90, 158, 0.15);
         }
 
         .btn-ghost {
             color: var(--accent);
-            border: 1px solid rgba(34, 211, 238, 0.22);
-            background: rgba(34, 211, 238, 0.08);
+            border: 1px solid var(--accent);
+            background: rgba(0, 212, 170, 0.08);
         }
 
         .welcome-container {
@@ -205,9 +301,10 @@
 
         .hero-panel {
             padding: clamp(28px, 4vw, 52px);
-            border-radius: 34px;
+            border-radius: 24px;
             position: relative;
             overflow: hidden;
+            border: 2px solid var(--yao-embroidery);
         }
 
         .hero-panel::before {
@@ -215,9 +312,22 @@
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(circle at 0% 0%, rgba(255,255,255,0.13), transparent 28%),
-                radial-gradient(circle at 100% 100%, rgba(34, 211, 238, 0.14), transparent 26%);
+                radial-gradient(circle at 0% 0%, rgba(59, 93, 201, 0.15), transparent 28%),
+                radial-gradient(circle at 100% 100%, rgba(0, 212, 170, 0.12), transparent 26%);
             pointer-events: none;
+        }
+
+        .hero-panel::after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            border: 1px solid var(--yao-embroidery);
+            opacity: 0.3;
+            pointer-events: none;
+            border-radius: 18px;
         }
 
         .hero-content {
@@ -226,17 +336,29 @@
         }
 
         .logo {
-            width: 94px;
-            height: 94px;
-            border-radius: 28px;
-            background: linear-gradient(135deg, rgba(124, 136, 255, 0.95), rgba(34, 211, 238, 0.95));
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--yao-indigo), var(--yao-indigo-light));
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 42px;
             margin-bottom: 24px;
-            box-shadow: 0 18px 50px rgba(34, 211, 238, 0.2);
+            box-shadow: 0 18px 50px rgba(26, 58, 110, 0.3);
+            border: 2px solid var(--yao-silver);
             animation: floaty 4s ease-in-out infinite;
+            position: relative;
+        }
+
+        .logo::after {
+            content: "盘";
+            position: absolute;
+            bottom: 2px;
+            right: 6px;
+            font-size: 10px;
+            color: var(--yao-embroidery);
+            opacity: 0.5;
         }
 
         @keyframes floaty {
@@ -1188,13 +1310,14 @@
     </style>
 </head>
 <body>
+    <div class="yao-pattern"></div>
     <div class="demo-badge" id="demoBadge" style="display: none;">🎬 演示模式</div>
 
     <div class="page active" id="welcomePage">
         <div class="welcome-container">
             <section class="glass-panel hero-panel">
                 <div class="hero-content">
-                    <div class="eyebrow">🏔️ AI 辅助民族语言学习体验</div>
+                    <div class="eyebrow">🏔️ 瑶族文化 · AI 辅助学习</div>
                     <div class="logo">瑶</div>
                     <h1 class="welcome-title gradient-text">瑶语学习助手</h1>
                     <p class="welcome-subtitle">
@@ -1205,7 +1328,7 @@
                     <div class="feature-pills">
                         <span class="feature-pill">🎧 标准发音示范</span>
                         <span class="feature-pill">🎙️ 实时录音练习</span>
-                        <span class="feature-pill">📈 多维度评分反馈</span>
+                        <span class="feature-pill">📊 多维度评分反馈</span>
                         <span class="feature-pill">🏆 20 关循序渐进</span>
                     </div>
 
