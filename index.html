@@ -1216,9 +1216,6 @@
                         <button class="btn btn-secondary" onclick="startDemoMode()">
                             <span>🎬</span> 演示模式
                         </button>
-                        <button class="btn btn-secondary" onclick="startGameMode()">
-                                 🎮 游戏模式
-                        </button>
                     </div>
 
                     <div class="hero-stats">
@@ -1553,8 +1550,7 @@
                 totalScore: appState.totalScore,
                 userScores: appState.userScores,
                 bestScores: appState.bestScores,
-                studyDays: appState.studyDays,
-                lastStudyDate: new Date().toISOString()
+                studyDays: appState.studyDays
             };
             localStorage.setItem('yaoLanguageLearning', JSON.stringify(data));
         }
@@ -1931,11 +1927,7 @@
             const dtwDistance = D[n - 1][m - 1] / (n + m);
             const similarity = Math.exp(-dtwDistance);
 
-            return {
-                distance: dtwDistance,
-                similarity,
-                path: []
-            };
+            return { distance: dtwDistance, similarity };
         }
 
         async function calculateScore() {
@@ -1998,8 +1990,7 @@
                     timbre: timbreScore,
                     fluency: fluencyScore
                 },
-                analysis,
-                dtwPath: dtwResult.path
+                analysis
             };
         }
 
@@ -2102,8 +2093,7 @@
                     timbre: timbreScore,
                     fluency: fluencyScore
                 },
-                analysis,
-                dtwPath: []
+                analysis
             };
         }
 
@@ -2126,7 +2116,7 @@
                 <div class="analysis-item">${item.content}</div>
             `).join('');
 
-            drawComparisonChart(result.dtwPath);
+            drawComparisonChart();
 
             scoreSection.classList.add('show');
 
