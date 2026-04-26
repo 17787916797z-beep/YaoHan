@@ -51,7 +51,7 @@
         }
 1
         body {
-            font-family: "Inter", "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+            font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "SimHei", sans-serif;
             min-height: 100vh;
             color: var(--text);
             overflow-x: hidden;
@@ -61,6 +61,8 @@
                 radial-gradient(circle at 50% 78%, rgba(0, 212, 170, 0.10), transparent 32%),
                 linear-gradient(145deg, #060d1a 0%, #0a1220 42%, #0f1a2e 100%);
             position: relative;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         body::before {
@@ -367,16 +369,16 @@
         }
 
         .welcome-title {
-            font-size: clamp(2.5rem, 5vw, 4.25rem);
+            font-size: clamp(2.8rem, 5.5vw, 4.5rem);
             line-height: 1.05;
-            font-weight: 800;
+            font-weight: 900;
             letter-spacing: -0.03em;
             margin-bottom: 18px;
         }
 
         .welcome-subtitle {
-            font-size: 1.08rem;
-            line-height: 1.9;
+            font-size: 1.15rem;
+            line-height: 1.85;
             color: var(--text-soft);
             max-width: 660px;
             margin-bottom: 28px;
@@ -491,9 +493,9 @@
         }
 
         .section-title {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
+            font-size: clamp(2.3rem, 4.5vw, 3.3rem);
+            font-weight: 900;
+            letter-spacing: 0.05em;
             text-align: center;
             margin-bottom: 14px;
         }
@@ -523,7 +525,7 @@
 
         .instruction-card p {
             color: var(--text-soft);
-            line-height: 1.9;
+            line-height: 1.85;
         }
 
         .step-list {
@@ -768,9 +770,9 @@
 
         .card-title {
             font-size: 0.82rem;
-            color: var(--text-muted);
+            color: #ffffff;
             text-transform: uppercase;
-            letter-spacing: 0.14em;
+            letter-spacing: 0.12em;
             margin-bottom: 18px;
         }
 
@@ -789,22 +791,26 @@
         }
 
         .yao-text {
-            font-size: clamp(2.5rem, 4vw, 3.8rem);
-            font-weight: 800;
-            line-height: 1.15;
-            letter-spacing: -0.03em;
+            font-size: clamp(2.8rem, 5vw, 4.2rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: 0.05em;
             margin-bottom: 12px;
-            background: linear-gradient(135deg, #ffffff, #d5deff 45%, #8be8ff 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #e8f4ff 30%, #c4dfff 60%, #ffffff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
         }
 
         .chinese-text {
-            font-size: 1.16rem;
+            font-size: 1.3rem;
             color: var(--accent);
             font-weight: 700;
-            line-height: 1.7;
+            line-height: 1.6;
+            letter-spacing: 0.08em;
+            text-shadow: 0 0 20px rgba(0, 212, 170, 0.4);
         }
 
         .helper-grid {
