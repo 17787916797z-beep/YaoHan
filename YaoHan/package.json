@@ -1,0 +1,135 @@
+{
+  "name": "yao-language-learning",
+  "version": "1.0.0",
+  "description": "瑶语学习助手 - 蓝靛瑶语发音训练应用",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "build:all": "electron-builder --win --mac --linux",
+    "pack": "electron-builder --dir",
+    "postinstall": "electron-builder install-app-deps",
+    "icons": "node create-icons.js",
+    "mobile:android": "node build-mobile.js android",
+    "mobile:sync": "npx cap sync",
+    "mobile:open": "npx cap open android"
+  },
+  "keywords": [
+    "瑶语",
+    "语言学习",
+    "语音识别",
+    "民族文化",
+    "蓝靛瑶"
+  ],
+  "author": "瑶语学习助手开发团队",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.yaolanguage.learning",
+    "productName": "瑶语学习助手",
+    "copyright": "Copyright © 2024",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "main.js",
+      "preload.js",
+      "assets/**/*",
+      "audio/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "./audio",
+        "to": "audio"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64", "ia32"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icon.ico",
+      "publisherName": "瑶语学习助手开发团队"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        },
+        {
+          "target": "zip",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "icon": "assets/icon.icns",
+      "category": "public.app-category.education",
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": ["x64"]
+        },
+        {
+          "target": "deb",
+          "arch": ["x64"]
+        },
+        {
+          "target": "rpm",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icons",
+      "category": "Education",
+      "maintainer": "瑶语学习助手开发团队",
+      "vendor": "瑶语学习助手开发团队",
+      "synopsis": "瑶语学习助手 - 蓝靛瑶语发音训练",
+      "description": "一款专注于蓝靛瑶语发音训练的AI学习应用，支持离线语音识别和智能评分。"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "installerHeaderIcon": "assets/icon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "瑶语学习助手"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ],
+      "window": {
+        "width": 400,
+        "height": 300
+      }
+    }
+  }
+}
