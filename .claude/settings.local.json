@@ -12,7 +12,9 @@
       "Bash(git push *)",
       "Bash(git pull *)",
       "Bash(cp -r YaoHan/* .)",
-      "Bash(rm -rf YaoHan/)"
+      "Bash(rm -rf YaoHan/)",
+      "Bash(sed -i 's/🎧 标准发音示范/🎧 标准发音示范/' index.html)",
+      "Bash(sed -i 's/🎙️ 实时录音练习/🎙️ 实时录音练习/' index.html)"
     ],
     "additionalDirectories": [
       "c:\\Users\\lenovo\\Desktop\\YaoHan"
