@@ -22,21 +22,21 @@
 
             --yao-indigo: #1a3a6e;
             --yao-indigo-light: #2d5a9e;
-            --yao-embroidery: #c4a574;
-            --yao-silver: #e8e4e1;
+            --yao-embroidery: #d4b886;
+            --yao-silver: #f5f1ed;
             --yao-red: #c8302c;
 
             --bg: #0a1220;
             --bg-soft: #0f1a2e;
-            --panel: rgba(26, 58, 110, 0.65);
-            --panel-strong: rgba(45, 90, 158, 0.78);
-            --panel-hover: rgba(45, 90, 158, 0.85);
-            --line: rgba(196, 165, 116, 0.18);
-            --line-strong: rgba(196, 165, 116, 0.35);
+            --panel: rgba(26, 58, 110, 0.75);
+            --panel-strong: rgba(45, 90, 158, 0.85);
+            --panel-hover: rgba(45, 90, 158, 0.92);
+            --line: rgba(196, 165, 116, 0.25);
+            --line-strong: rgba(196, 165, 116, 0.45);
 
-            --text: #f1f5f9;
-            --text-soft: #cbd5e1;
-            --text-muted: #94a3b8;
+            --text: #ffffff;
+            --text-soft: #e2e8f0;
+            --text-muted: #cbd5e1;
 
             --shadow-lg: 0 25px 70px rgba(26, 58, 110, 0.5);
             --shadow-md: 0 16px 42px rgba(26, 58, 110, 0.32);
@@ -56,10 +56,10 @@
             color: var(--text);
             overflow-x: hidden;
             background:
-                radial-gradient(circle at 15% 20%, rgba(59, 93, 201, 0.15), transparent 28%),
-                radial-gradient(circle at 82% 18%, rgba(107, 140, 255, 0.12), transparent 24%),
-                radial-gradient(circle at 50% 78%, rgba(0, 212, 170, 0.10), transparent 32%),
-                linear-gradient(145deg, #060d1a 0%, #0a1220 42%, #0f1a2e 100%);
+                radial-gradient(circle at 15% 20%, rgba(200, 48, 44, 0.15), transparent 28%),
+                radial-gradient(circle at 82% 18%, rgba(26, 58, 110, 0.2), transparent 24%),
+                radial-gradient(circle at 50% 78%, rgba(212, 184, 134, 0.12), transparent 32%),
+                linear-gradient(145deg, #0a0f1a 0%, #0f1525 42%, #1a2035 100%);
             position: relative;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -103,8 +103,8 @@
             left: 0;
             pointer-events: none;
             z-index: 0;
-            opacity: 0.03;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30L30 0z' fill='none' stroke='%23c4a574' stroke-width='1'/%3E%3Ccircle cx='30' cy='30' r='8' fill='none' stroke='%23c4a574' stroke-width='1'/%3E%3Cpath d='M15 30L45 30M30 15L30 45' stroke='%23c4a574' stroke-width='1'/%3E%3C/svg%3E");
+            opacity: 0.08;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30L30 0z' fill='none' stroke='%23d4b886' stroke-width='1.5'/%3E%3Ccircle cx='30' cy='30' r='8' fill='none' stroke='%23d4b886' stroke-width='1.5'/%3E%3Cpath d='M15 30L45 30M30 15L30 45' stroke='%23d4b886' stroke-width='1.5'/%3E%3C/svg%3E");
         }
 
         button,
@@ -183,11 +183,11 @@
         .level-nav,
         .stat-card,
         .chart-container {
-            background: linear-gradient(180deg, rgba(26, 58, 110, 0.72), rgba(45, 90, 158, 0.58));
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-            border: 1px solid var(--line);
-            box-shadow: var(--shadow-md);
+            background: linear-gradient(180deg, rgba(26, 58, 110, 0.85), rgba(45, 90, 158, 0.75));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 184, 134, 0.3);
+            box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255, 255, 255, 0.1);
             position: relative;
         }
 
@@ -210,15 +210,17 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 8px 16px;
-            border-radius: 4px;
-            border: 1px solid var(--yao-embroidery);
-            background: linear-gradient(135deg, var(--yao-indigo), var(--yao-indigo-light));
-            color: var(--yao-silver);
-            font-size: 0.86rem;
+            padding: 10px 18px;
+            border-radius: 6px;
+            border: 2px solid #d4b886;
+            background: linear-gradient(135deg, rgba(200, 48, 44, 0.3), rgba(26, 58, 110, 0.3));
+            color: #ffffff;
+            font-size: 0.95rem;
             letter-spacing: 0.1em;
             margin-bottom: 18px;
-            box-shadow: 0 2px 8px rgba(26, 58, 110, 0.3);
+            box-shadow: 0 4px 12px rgba(212, 184, 134, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
         }
 
         .gradient-text {
@@ -232,7 +234,7 @@
             border: none;
             border-radius: 8px;
             padding: 15px 24px;
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 700;
             cursor: pointer;
             transition: transform 0.24s ease, box-shadow 0.24s ease, background 0.24s ease, border-color 0.24s ease, opacity 0.24s ease;
@@ -243,6 +245,7 @@
             min-height: 54px;
             position: relative;
             overflow: hidden;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         .btn::before {
@@ -252,43 +255,54 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.1) 50%, transparent 60%);
+            background: linear-gradient(135deg, transparent 40%, rgba(255, 255, 255, 0.15) 50%, transparent 60%);
             pointer-events: none;
         }
 
         .btn:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
         }
 
         .btn:active {
-            transform: translateY(0);
+            transform: translateY(-1px);
         }
 
         .btn-primary {
-            color: var(--yao-silver);
-            background: linear-gradient(135deg, var(--yao-indigo), var(--yao-indigo-light));
-            border: 1px solid var(--yao-embroidery);
-            box-shadow: 0 16px 35px rgba(26, 58, 110, 0.3);
+            color: #ffffff;
+            background: linear-gradient(135deg, #3b5dc9, #5b7de9);
+            border: 2px solid rgba(212, 184, 134, 0.4);
+            box-shadow: 0 16px 35px rgba(59, 93, 201, 0.4), 0 0 20px rgba(59, 93, 201, 0.3);
         }
 
         .btn-primary:hover {
-            box-shadow: 0 22px 44px rgba(26, 58, 110, 0.4);
+            box-shadow: 0 22px 44px rgba(59, 93, 201, 0.5), 0 0 30px rgba(59, 93, 201, 0.4);
+            background: linear-gradient(135deg, #4a6dd9, #6a8df9);
         }
 
         .btn-secondary {
-            color: var(--text);
-            border: 1px solid var(--line-strong);
-            background: rgba(45, 90, 158, 0.08);
+            color: #ffffff;
+            border: 2px solid rgba(212, 184, 134, 0.5);
+            background: linear-gradient(135deg, rgba(212, 184, 134, 0.15), rgba(26, 58, 110, 0.15));
+            font-weight: 700;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .btn-secondary:hover {
-            background: rgba(45, 90, 158, 0.15);
+            background: linear-gradient(135deg, rgba(212, 184, 134, 0.25), rgba(26, 58, 110, 0.25));
+            border-color: rgba(212, 184, 134, 0.7);
         }
 
         .btn-ghost {
-            color: var(--accent);
-            border: 1px solid var(--accent);
-            background: rgba(0, 212, 170, 0.08);
+            color: #ffffff;
+            border: 2px solid #4ade80;
+            background: rgba(74, 222, 128, 0.15);
+            font-weight: 700;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-ghost:hover {
+            background: rgba(74, 222, 128, 0.25);
+            box-shadow: 0 8px 24px rgba(74, 222, 128, 0.3);
         }
 
         .welcome-container {
@@ -374,14 +388,16 @@
             font-weight: 900;
             letter-spacing: -0.03em;
             margin-bottom: 18px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
         }
 
         .welcome-subtitle {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             line-height: 1.85;
             color: var(--text-soft);
             max-width: 660px;
             margin-bottom: 28px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .feature-pills {
@@ -392,12 +408,15 @@
         }
 
         .feature-pill {
-            padding: 11px 15px;
+            padding: 12px 18px;
             border-radius: 999px;
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-soft);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            font-size: 0.92rem;
+            background: linear-gradient(135deg, rgba(212, 184, 134, 0.15), rgba(26, 58, 110, 0.15));
+            color: #ffffff;
+            border: 2px solid rgba(212, 184, 134, 0.4);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
 
         .hero-actions {
@@ -414,23 +433,26 @@
         }
 
         .hero-stat {
-            padding: 18px 18px 16px;
+            padding: 20px 18px 18px;
             border-radius: 18px;
-            background: rgba(255, 255, 255, 0.045);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: linear-gradient(135deg, rgba(212, 184, 134, 0.12), rgba(26, 58, 110, 0.12));
+            border: 2px solid rgba(212, 184, 134, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .hero-stat-value {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 800;
-            color: white;
+            color: #ffd700;
             margin-bottom: 6px;
+            text-shadow: 0 2px 8px rgba(255, 215, 0, 0.5);
         }
 
         .hero-stat-label {
-            font-size: 0.9rem;
-            color: var(--text-muted);
+            font-size: 0.95rem;
+            color: #e2e8f0;
             line-height: 1.5;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .welcome-side {
@@ -443,17 +465,23 @@
             border-radius: 28px;
             position: relative;
             overflow: hidden;
+            background: linear-gradient(135deg, rgba(212, 184, 134, 0.1), rgba(26, 58, 110, 0.15));
+            border: 2px solid rgba(212, 184, 134, 0.3);
         }
 
         .preview-card h3 {
-            font-size: 1.04rem;
+            font-size: 1.1rem;
             margin-bottom: 14px;
+            color: #ffd700;
+            font-weight: 700;
+            text-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
         }
 
         .preview-card p {
-            color: var(--text-soft);
+            color: #e2e8f0;
             line-height: 1.8;
-            font-size: 0.95rem;
+            font-size: 0.98rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .mini-progress {
@@ -467,8 +495,10 @@
             align-items: center;
             justify-content: space-between;
             gap: 14px;
-            color: var(--text-soft);
-            font-size: 0.9rem;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .mini-track {
@@ -498,14 +528,16 @@
             letter-spacing: 0.05em;
             text-align: center;
             margin-bottom: 14px;
+            text-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
         }
 
         .section-subtitle {
             text-align: center;
-            color: var(--text-soft);
-            font-size: 1.03rem;
+            color: #e2e8f0;
+            font-size: 1.08rem;
             line-height: 1.8;
             margin-bottom: 34px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .instruction-card {
@@ -515,17 +547,21 @@
         }
 
         .instruction-card h3 {
-            font-size: 1.12rem;
+            font-size: 1.2rem;
             margin-bottom: 14px;
             display: flex;
             align-items: center;
             gap: 10px;
-            color: white;
+            color: #ffffff;
+            font-weight: 700;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .instruction-card p {
-            color: var(--text-soft);
+            color: #e2e8f0;
             line-height: 1.85;
+            font-size: 1rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .step-list {
@@ -539,11 +575,13 @@
             counter-increment: step;
             padding: 16px 16px 16px 58px;
             position: relative;
-            color: var(--text-soft);
+            color: #e2e8f0;
             line-height: 1.75;
             border-radius: 16px;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.05);
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            font-size: 1rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .step-list li::before {
@@ -555,13 +593,14 @@
             width: 30px;
             height: 30px;
             border-radius: 999px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, #3b5dc9, #6b8cff);
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 700;
+            box-shadow: 0 4px 12px rgba(59, 93, 201, 0.4);
         }
 
         .btn-group {
@@ -601,8 +640,10 @@
         }
 
         .brand-title {
-            font-size: 1.12rem;
+            font-size: 1.2rem;
             font-weight: 700;
+            color: #ffffff;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
         }
 
         .brand-meta {
@@ -612,12 +653,14 @@
         }
 
         .meta-chip {
-            padding: 8px 12px;
+            padding: 8px 14px;
             border-radius: 999px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.07);
-            color: var(--text-soft);
-            font-size: 0.86rem;
+            background: linear-gradient(135deg, rgba(212, 184, 134, 0.2), rgba(26, 58, 110, 0.2));
+            border: 2px solid rgba(212, 184, 134, 0.4);
+            color: #ffffff;
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .progress-wrapper {
@@ -629,26 +672,30 @@
             display: flex;
             justify-content: space-between;
             gap: 14px;
-            color: var(--text-soft);
-            font-size: 0.92rem;
+            color: #ffffff;
+            font-size: 0.98rem;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .progress-bar {
             width: 100%;
-            height: 12px;
-            background: rgba(255,255,255,0.08);
+            height: 14px;
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 999px;
             overflow: hidden;
-            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(212, 184, 134, 0.3);
         }
 
         .progress-fill {
             height: 100%;
             border-radius: inherit;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
+            background: linear-gradient(90deg, #fbbf24, #fcd34d, #fde047);
             transition: width 0.45s ease;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 0 20px rgba(251, 191, 36, 0.6);
         }
 
         .progress-fill::after {
@@ -674,34 +721,40 @@
 
         .stat-item {
             min-width: 108px;
-            padding: 16px 18px;
+            padding: 18px 20px;
             border-radius: 18px;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.06);
+            background: linear-gradient(135deg, rgba(212, 184, 134, 0.15), rgba(26, 58, 110, 0.15));
+            border: 2px solid rgba(212, 184, 134, 0.3);
             text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .stat-value {
-            font-size: 1.55rem;
+            font-size: 1.65rem;
             font-weight: 800;
-            color: white;
+            color: #ffffff;
             margin-bottom: 4px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
         }
 
         .stat-label {
-            font-size: 0.82rem;
-            color: var(--text-muted);
+            font-size: 0.88rem;
+            color: #e2e8f0;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .level-badge {
-            padding: 14px 18px;
+            padding: 16px 20px;
             border-radius: 18px;
-            background: linear-gradient(135deg, rgba(124, 136, 255, 0.9), rgba(168, 85, 247, 0.9));
+            background: linear-gradient(135deg, #c8302c, #e63946);
             min-width: 92px;
             text-align: center;
             font-weight: 800;
             letter-spacing: 0.02em;
-            box-shadow: 0 10px 28px rgba(124, 136, 255, 0.22);
+            box-shadow: 0 10px 28px rgba(200, 48, 44, 0.4), 0 0 20px rgba(200, 48, 44, 0.3);
+            border: 2px solid rgba(212, 184, 134, 0.5);
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
         }
 
         .level-nav {
@@ -719,7 +772,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 800;
             cursor: pointer;
             transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -730,30 +783,42 @@
             transform: translateY(-2px);
         }
 
-        .level-dot.locked {
-            background: rgba(255,255,255,0.035);
-            color: rgba(255,255,255,0.35);
-            border-color: rgba(255,255,255,0.04);
-            cursor: not-allowed;
-        }
-
         .level-dot.available {
-            background: rgba(124, 136, 255, 0.12);
-            color: #cfd5ff;
-            border-color: rgba(124, 136, 255, 0.35);
+            background: rgba(124, 136, 255, 0.25);
+            color: #ffffff;
+            border-color: rgba(124, 136, 255, 0.6);
+            font-weight: 700;
         }
 
         .level-dot.completed {
-            background: rgba(34, 197, 94, 0.18);
-            color: #dfffe9;
-            border-color: rgba(34, 197, 94, 0.34);
+            background: rgba(34, 197, 94, 0.3);
+            color: #ffffff;
+            border-color: rgba(34, 197, 94, 0.7);
+            font-weight: 700;
         }
 
         .level-dot.current {
-            background: linear-gradient(135deg, rgba(245, 158, 11, 0.92), rgba(251, 191, 36, 0.92));
-            color: #18120a;
-            border-color: rgba(255, 222, 89, 0.65);
-            box-shadow: 0 10px 22px rgba(245, 158, 11, 0.28);
+            background: linear-gradient(135deg, rgba(245, 158, 11, 1), rgba(251, 191, 36, 1));
+            color: #000000;
+            border-color: rgba(255, 222, 89, 0.8);
+            box-shadow: 0 10px 22px rgba(245, 158, 11, 0.4), 0 0 20px rgba(245, 158, 11, 0.6);
+            font-weight: 800;
+        }
+
+        .level-category-label {
+            grid-column: 1 / -1;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffd700;
+            padding: 8px 0 4px;
+            border-top: 2px solid rgba(212, 184, 134, 0.4);
+            margin-top: 8px;
+            text-shadow: 0 2px 8px rgba(255, 215, 0, 0.5);
+        }
+
+        .level-category-label:first-child {
+            border-top: none;
+            margin-top: 0;
         }
 
         .learning-area {
@@ -769,11 +834,13 @@
         }
 
         .card-title {
-            font-size: 0.82rem;
-            color: #ffffff;
+            font-size: 0.9rem;
+            color: #ffd700;
             text-transform: uppercase;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.15em;
             margin-bottom: 18px;
+            font-weight: 700;
+            text-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
         }
 
         .lesson-main {
@@ -785,32 +852,33 @@
             padding: 26px;
             border-radius: 24px;
             background:
-                linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025)),
-                radial-gradient(circle at top right, rgba(34,211,238,0.12), transparent 30%);
-            border: 1px solid rgba(255,255,255,0.06);
+                linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04)),
+                radial-gradient(circle at top right, rgba(34,211,238,0.2), transparent 30%);
+            border: 2px solid rgba(212, 184, 134, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         .yao-text {
-            font-size: clamp(2.8rem, 5vw, 4.2rem);
+            font-size: clamp(3.2rem, 5.5vw, 5rem);
             font-weight: 900;
             line-height: 1.1;
             letter-spacing: 0.05em;
             margin-bottom: 12px;
-            background: linear-gradient(135deg, #ffffff 0%, #e8f4ff 30%, #c4dfff 60%, #ffffff 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #fff5e1 30%, #ffd700 60%, #ffffff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+            text-shadow: 0 0 60px rgba(255, 215, 0, 0.5);
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
         }
 
         .chinese-text {
-            font-size: 1.3rem;
-            color: var(--accent);
+            font-size: 1.5rem;
+            color: #4ade80;
             font-weight: 700;
             line-height: 1.6;
             letter-spacing: 0.08em;
-            text-shadow: 0 0 20px rgba(0, 212, 170, 0.4);
+            text-shadow: 0 2px 10px rgba(74, 222, 128, 0.6), 0 0 30px rgba(74, 222, 128, 0.3);
         }
 
         .helper-grid {
@@ -820,22 +888,26 @@
         }
 
         .helper-card {
-            padding: 16px 18px;
+            padding: 18px 20px;
             border-radius: 18px;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.06);
+            background: linear-gradient(135deg, rgba(212, 184, 134, 0.12), rgba(26, 58, 110, 0.12));
+            border: 2px solid rgba(212, 184, 134, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .helper-label {
-            color: var(--text-muted);
-            font-size: 0.82rem;
+            color: #fbbf24;
+            font-size: 0.85rem;
             margin-bottom: 8px;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .helper-value {
-            color: white;
+            color: #ffffff;
             font-weight: 700;
             line-height: 1.6;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .audio-controls {
@@ -875,17 +947,20 @@
         }
 
         .record-panel {
-            padding: 20px;
+            padding: 22px;
             border-radius: 24px;
-            background: rgba(255,255,255,0.035);
-            border: 1px solid rgba(255,255,255,0.06);
+            background: linear-gradient(135deg, rgba(212, 184, 134, 0.08), rgba(26, 58, 110, 0.08));
+            border: 2px solid rgba(212, 184, 134, 0.25);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .record-tip {
-            color: var(--text-soft);
+            color: #fbbf24;
             line-height: 1.8;
-            font-size: 0.95rem;
+            font-size: 1rem;
             margin-bottom: 18px;
+            font-weight: 500;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .btn-record {
@@ -943,10 +1018,11 @@
         .score-section {
             display: none;
             margin-top: 22px;
-            padding: 22px;
+            padding: 24px;
             border-radius: 24px;
-            background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-            border: 1px solid rgba(255,255,255,0.06);
+            background: linear-gradient(135deg, rgba(212, 184, 134, 0.1), rgba(26, 58, 110, 0.1));
+            border: 2px solid rgba(212, 184, 134, 0.3);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         }
 
         .score-section.show {
@@ -974,16 +1050,16 @@
         }
 
         .score-circle {
-            width: 128px;
-            height: 128px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            background: radial-gradient(circle at top, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+            background: radial-gradient(circle at top, rgba(212, 184, 134, 0.2), rgba(26, 58, 110, 0.2));
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.3);
         }
 
         .score-circle::before {
@@ -991,8 +1067,8 @@
             position: absolute;
             inset: 0;
             border-radius: inherit;
-            padding: 5px;
-            background: conic-gradient(var(--score-color) var(--score-deg), rgba(255,255,255,0.08) var(--score-deg));
+            padding: 6px;
+            background: conic-gradient(var(--score-color) var(--score-deg), rgba(255,255,255,0.15) var(--score-deg));
             -webkit-mask:
                 linear-gradient(#fff 0 0) content-box,
                 linear-gradient(#fff 0 0);
@@ -1004,28 +1080,37 @@
         }
 
         .score-value {
-            font-size: 2.4rem;
+            font-size: 2.8rem;
             font-weight: 800;
             line-height: 1;
             margin-bottom: 6px;
+            color: #ffffff;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
         }
 
         .score-label {
-            font-size: 0.84rem;
-            color: var(--text-muted);
+            font-size: 0.9rem;
+            color: #fbbf24;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .score-pass { --score-color: var(--success); }
         .score-fail { --score-color: var(--danger); }
 
         .score-copy h4 {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             margin-bottom: 8px;
+            color: #ffffff;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .score-copy p {
-            color: var(--text-soft);
+            color: #e2e8f0;
             line-height: 1.8;
+            font-size: 0.98rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .score-dimensions {
@@ -1036,52 +1121,61 @@
         }
 
         .dimension-item {
-            padding: 18px 16px;
+            padding: 20px 18px;
             border-radius: 18px;
-            background: rgba(255,255,255,0.045);
-            border: 1px solid rgba(255,255,255,0.06);
+            background: linear-gradient(135deg, rgba(212, 184, 134, 0.12), rgba(26, 58, 110, 0.12));
+            border: 2px solid rgba(212, 184, 134, 0.3);
             text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .dimension-name {
-            font-size: 0.82rem;
-            color: var(--text-muted);
+            font-size: 0.88rem;
+            color: #fbbf24;
             margin-bottom: 10px;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .dimension-score {
-            font-size: 1.58rem;
+            font-size: 1.8rem;
             font-weight: 800;
-            color: white;
+            color: #ffffff;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
         }
 
         .analysis-section,
         .comparison-section {
-            background: rgba(255,255,255,0.028);
-            border: 1px solid rgba(255,255,255,0.05);
+            background: linear-gradient(135deg, rgba(212, 184, 134, 0.08), rgba(26, 58, 110, 0.08));
+            border: 2px solid rgba(212, 184, 134, 0.25);
             border-radius: 20px;
-            padding: 18px;
+            padding: 20px;
             margin-top: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .analysis-title,
         .comparison-title {
-            font-size: 0.96rem;
-            color: #d9e2ff;
+            font-size: 1.05rem;
+            color: #ffd700;
             margin-bottom: 14px;
             font-weight: 700;
             letter-spacing: 0.01em;
+            text-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
         }
 
         .analysis-content {
-            color: var(--text-soft);
+            color: #e2e8f0;
             line-height: 1.82;
-            font-size: 0.95rem;
+            font-size: 0.98rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .analysis-item {
-            padding: 12px 0;
-            border-bottom: 1px dashed rgba(255,255,255,0.08);
+            padding: 14px 0;
+            border-bottom: 1px dashed rgba(212, 184, 134, 0.3);
+            color: #e2e8f0;
+            font-size: 0.98rem;
         }
 
         .analysis-item:last-child {
@@ -1162,17 +1256,20 @@
             font-weight: 800;
             letter-spacing: -0.03em;
             margin-bottom: 10px;
-            background: linear-gradient(135deg, #fff0b3, #fbbf24 45%, #f59e0b 100%);
+            background: linear-gradient(135deg, #ffd700, #fbbf24 45%, #f59e0b 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            text-shadow: 0 4px 16px rgba(255, 215, 0, 0.5);
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
         }
 
         .result-subtitle {
-            font-size: 1.05rem;
-            color: var(--text-soft);
+            font-size: 1.1rem;
+            color: #e2e8f0;
             margin-bottom: 34px;
             line-height: 1.8;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .stats-grid {
@@ -1189,15 +1286,17 @@
         }
 
         .stat-number {
-            font-size: 2.35rem;
+            font-size: 2.6rem;
             font-weight: 800;
-            color: white;
+            color: #ffd700;
             margin-bottom: 6px;
+            text-shadow: 0 2px 12px rgba(255, 215, 0, 0.6);
         }
 
         .stat-desc {
-            font-size: 0.9rem;
-            color: var(--text-muted);
+            font-size: 0.95rem;
+            color: #e2e8f0;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         }
 
         .chart-container {
@@ -1207,9 +1306,11 @@
         }
 
         .chart-title {
-            font-size: 1rem;
-            color: var(--text-soft);
+            font-size: 1.05rem;
+            color: #ffd700;
             margin-bottom: 14px;
+            font-weight: 700;
+            text-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
         }
 
         .demo-badge {
@@ -1248,7 +1349,7 @@
             }
 
             .level-nav {
-                grid-template-columns: repeat(5, 1fr);
+                grid-template-columns: repeat(10, 1fr);
             }
         }
 
@@ -1303,6 +1404,11 @@
 
             .level-dot {
                 border-radius: 16px;
+                font-size: 0.7rem;
+            }
+
+            .level-nav {
+                grid-template-columns: repeat(5, 1fr);
             }
         }
 
@@ -1335,7 +1441,7 @@
                         <span class="feature-pill">🎧 标准发音示范</span>
                         <span class="feature-pill">🎙️ 实时录音练习</span>
                         <span class="feature-pill">📊 多维度评分反馈</span>
-                        <span class="feature-pill">🏆 20 关循序渐进</span>
+                        <span class="feature-pill">🏆 47 关自由选择</span>
                     </div>
 
                     <div class="hero-actions">
@@ -1349,16 +1455,16 @@
 
                     <div class="hero-stats">
                         <div class="hero-stat">
-                            <div class="hero-stat-value">20</div>
-                            <div class="hero-stat-label">闯关内容覆盖 10 组基础发音，含慢速与正常语速。</div>
+                            <div class="hero-stat-value">47</div>
+                            <div class="hero-stat-label">基础、进阶、最终三大关卡，涵盖瑶语核心词汇。</div>
                         </div>
                         <div class="hero-stat">
                             <div class="hero-stat-value">4维</div>
                             <div class="hero-stat-label">从音准、节奏、音色、流畅度进行综合评测。</div>
                         </div>
                         <div class="hero-stat">
-                            <div class="hero-stat-value">60+</div>
-                            <div class="hero-stat-label">达到通过分即可继续闯关，反馈即时可见。</div>
+                            <div class="hero-stat-value">自由</div>
+                            <div class="hero-stat-label">自由选择关卡，想学哪个就学哪个。</div>
                         </div>
                     </div>
                 </div>
@@ -1402,7 +1508,7 @@
 
             <div class="instruction-card">
                 <h3><span>🎯</span> 学习目标</h3>
-                <p>通过 20 个精心设计的关卡，掌握蓝靛瑶语 10 组基础发音，包括正常语速和慢速语速两种模式，实现从入门到熟练的完整学习路径。</p>
+                <p>通过 47 个精心设计的关卡，掌握蓝靛瑶语核心词汇，包括基础、进阶、最终三个难度等级，实现从入门到熟练的完整学习路径。</p>
             </div>
 
             <div class="instruction-card">
@@ -1574,7 +1680,7 @@
             <div class="eyebrow" style="margin: 0 auto 16px; width: fit-content;">🏁 学习完成</div>
             <div class="trophy">🏆</div>
             <h1 class="result-title">恭喜通关！</h1>
-            <p class="result-subtitle">您已完成全部 20 个关卡的学习，已经建立起蓝靛瑶语基础发音的清晰感知与模仿能力。</p>
+            <p class="result-subtitle">您已完成全部 47 个关卡的学习，已经建立起蓝靛瑶语从基础到进阶的完整发音体系与模仿能力。</p>
 
             <div class="stats-grid">
                 <div class="stat-card">
@@ -1613,34 +1719,68 @@
 
     <script>
         const CONFIG = {
-            AUDIO_PATH: './audio/基础发音/',
-            TOTAL_LEVELS: 20,
+            AUDIO_PATH_BASE: './audio/基础发音/',
+            AUDIO_PATH_ADVANCED: './audio/进阶发音/',
+            AUDIO_PATH_FINAL: './audio/最终发音/',
+            TOTAL_LEVELS: 47,
             PASS_SCORE: 60,
             MAX_RECORDING_TIME: 10000,
             SAMPLE_RATE: 16000
         };
 
         const levelData = [
-            { id: 1, yao: "你好", chinese: "你好", group: 1, speed: "slow" },
-            { id: 2, yao: "你好", chinese: "你好", group: 1, speed: "normal" },
-            { id: 3, yao: "谢谢", chinese: "谢谢", group: 2, speed: "slow" },
-            { id: 4, yao: "谢谢", chinese: "谢谢", group: 2, speed: "normal" },
-            { id: 5, yao: "再见", chinese: "再见", group: 3, speed: "slow" },
-            { id: 6, yao: "再见", chinese: "再见", group: 3, speed: "normal" },
-            { id: 7, yao: "请", chinese: "请", group: 4, speed: "slow" },
-            { id: 8, yao: "请", chinese: "请", group: 4, speed: "normal" },
-            { id: 9, yao: "对不起", chinese: "对不起", group: 5, speed: "slow" },
-            { id: 10, yao: "对不起", chinese: "对不起", group: 5, speed: "normal" },
-            { id: 11, yao: "是", chinese: "是", group: 6, speed: "slow" },
-            { id: 12, yao: "是", chinese: "是", group: 6, speed: "normal" },
-            { id: 13, yao: "不是", chinese: "不是", group: 7, speed: "slow" },
-            { id: 14, yao: "不是", chinese: "不是", group: 7, speed: "normal" },
-            { id: 15, yao: "多少钱", chinese: "多少钱", group: 8, speed: "slow" },
-            { id: 16, yao: "多少钱", chinese: "多少钱", group: 8, speed: "normal" },
-            { id: 17, yao: "在哪里", chinese: "在哪里", group: 9, speed: "slow" },
-            { id: 18, yao: "在哪里", chinese: "在哪里", group: 9, speed: "normal" },
-            { id: 19, yao: "什么时候", chinese: "什么时候", group: 10, speed: "slow" },
-            { id: 20, yao: "什么时候", chinese: "什么时候", group: 10, speed: "normal" }
+            // 基础关卡 (1-20)
+            { id: 1, yao: "你好", chinese: "你好", group: 1, speed: "slow", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 2, yao: "你好", chinese: "你好", group: 1, speed: "normal", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 3, yao: "谢谢", chinese: "谢谢", group: 2, speed: "slow", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 4, yao: "谢谢", chinese: "谢谢", group: 2, speed: "normal", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 5, yao: "再见", chinese: "再见", group: 3, speed: "slow", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 6, yao: "再见", chinese: "再见", group: 3, speed: "normal", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 7, yao: "请", chinese: "请", group: 4, speed: "slow", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 8, yao: "请", chinese: "请", group: 4, speed: "normal", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 9, yao: "对不起", chinese: "对不起", group: 5, speed: "slow", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 10, yao: "对不起", chinese: "对不起", group: 5, speed: "normal", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 11, yao: "是", chinese: "是", group: 6, speed: "slow", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 12, yao: "是", chinese: "是", group: 6, speed: "normal", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 13, yao: "不是", chinese: "不是", group: 7, speed: "slow", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 14, yao: "不是", chinese: "不是", group: 7, speed: "normal", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 15, yao: "多少钱", chinese: "多少钱", group: 8, speed: "slow", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 16, yao: "多少钱", chinese: "多少钱", group: 8, speed: "normal", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 17, yao: "在哪里", chinese: "在哪里", group: 9, speed: "slow", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 18, yao: "在哪里", chinese: "在哪里", group: 9, speed: "normal", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 19, yao: "什么时候", chinese: "什么时候", group: 10, speed: "slow", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            { id: 20, yao: "什么时候", chinese: "什么时候", group: 10, speed: "normal", category: "基础", audioPath: CONFIG.AUDIO_PATH_BASE },
+            
+            // 进阶关卡 (21-37) - 使用实际的音频文件
+            { id: 21, yao: "蓝靛", chinese: "蓝靛", group: 1, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_01_蓝靛.mp3" },
+            { id: 22, yao: "银子", chinese: "银子", group: 2, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_02_银子.mp3" },
+            { id: 23, yao: "土布", chinese: "土布", group: 3, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_03_土布.mp3" },
+            { id: 24, yao: "清晨", chinese: "清晨", group: 4, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_04_清晨.mp3" },
+            { id: 25, yao: "夜晚", chinese: "夜晚", group: 5, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_05_夜晚.mp3" },
+            { id: 26, yao: "三餐", chinese: "三餐", group: 6, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_06_三餐.mp3" },
+            { id: 27, yao: "柴火", chinese: "柴火", group: 7, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_07_柴火.mp3" },
+            { id: 28, yao: "远行", chinese: "远行", group: 8, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_08_远行.mp3" },
+            { id: 29, yao: "高山", chinese: "高山", group: 9, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_09_高山.mp3" },
+            { id: 30, yao: "河流", chinese: "河流", group: 10, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_10_河流.mp3" },
+            { id: 31, yao: "劳作", chinese: "劳作", group: 11, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_11_劳作.mp3" },
+            { id: 32, yao: "竹林", chinese: "竹林", group: 12, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_12_竹林.mp3" },
+            { id: 33, yao: "山野", chinese: "山野", group: 13, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_13_山野.mp3" },
+            { id: 34, yao: "草木", chinese: "草木", group: 14, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_14_草木.mp3" },
+            { id: 35, yao: "梯田", chinese: "梯田", group: 15, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_15_梯田.mp3" },
+            { id: 36, yao: "包头", chinese: "包头", group: 16, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_16_包头.mp3" },
+            { id: 37, yao: "飞鸟", chinese: "飞鸟", group: 17, speed: "normal", category: "进阶", audioPath: CONFIG.AUDIO_PATH_ADVANCED, audioFile: "jin_17_飞鸟.mp3" },
+            
+            // 最终关卡 (38-47) - 使用实际的音频文件
+            { id: 38, yao: "我是蓝靛瑶儿女", chinese: "我是蓝靛瑶儿女", group: 1, speed: "normal", category: "最终", audioPath: CONFIG.AUDIO_PATH_FINAL, audioFile: "duan_01_我是蓝靛瑶儿女.mp3" },
+            { id: 39, yao: "学习传统瑶族文化", chinese: "学习传统瑶族文化", group: 2, speed: "normal", category: "最终", audioPath: CONFIG.AUDIO_PATH_FINAL, audioFile: "duan_02_学习传统瑶族文化.mp3" },
+            { id: 40, yao: "山间瑶歌代代唱", chinese: "山间瑶歌代代唱", group: 3, speed: "normal", category: "最终", audioPath: CONFIG.AUDIO_PATH_FINAL, audioFile: "duan_03_山间瑶歌代代唱.mp3" },
+            { id: 41, yao: "一针一线绣乡愁", chinese: "一针一线绣乡愁", group: 4, speed: "normal", category: "最终", audioPath: CONFIG.AUDIO_PATH_FINAL, audioFile: "duan_04_一针一线绣乡愁.mp3" },
+            { id: 42, yao: "热爱大山与家园", chinese: "热爱大山与家园", group: 5, speed: "normal", category: "最终", audioPath: CONFIG.AUDIO_PATH_FINAL, audioFile: "duan_05_热爱大山与家园.mp3" },
+            { id: 43, yao: "蓝靛染布传千年", chinese: "蓝靛染布传千年", group: 6, speed: "normal", category: "最终", audioPath: CONFIG.AUDIO_PATH_FINAL, audioFile: "duan_06_蓝靛染布传千年.mp3" },
+            { id: 44, yao: "传承传统技艺不忘记", chinese: "传承传统技艺不忘记", group: 7, speed: "normal", category: "最终", audioPath: CONFIG.AUDIO_PATH_FINAL, audioFile: "duan_07_传承传统技艺不忘记.mp3" },
+            { id: 45, yao: "瑶寨山水美如花", chinese: "瑶寨山水美如花", group: 8, speed: "normal", category: "最终", audioPath: CONFIG.AUDIO_PATH_FINAL, audioFile: "duan_08_瑶寨山水美如花.mp3" },
+            { id: 46, yao: "用心学好瑶话", chinese: "用心学好瑶话", group: 9, speed: "normal", category: "最终", audioPath: CONFIG.AUDIO_PATH_FINAL, audioFile: "duan_09_用心学好瑶话.mp3" },
+            { id: 47, yao: "守护瑶族的根与魂", chinese: "守护瑶族的根与魂", group: 10, speed: "normal", category: "最终", audioPath: CONFIG.AUDIO_PATH_FINAL, audioFile: "duan_10_守护瑶族的根与魂.mp3" }
         ];
 
         let appState = {
@@ -1711,37 +1851,57 @@
             document.getElementById('totalScoreDisplay').textContent = appState.totalScore;
 
             const userLevel = Math.floor(appState.totalScore / 200) + 1;
-            document.getElementById('userLevelBadge').textContent = `Lv.${Math.min(userLevel, 10)}`;
+            document.getElementById('userLevelBadge').textContent = `Lv.${Math.min(userLevel, 30)}`;
 
-            const progress = (appState.currentLevel / CONFIG.TOTAL_LEVELS) * 100;
+            // 计算已完成的关卡数
+            const completedCount = appState.userScores.filter(score => score >= CONFIG.PASS_SCORE).length;
+            const progress = (completedCount / CONFIG.TOTAL_LEVELS) * 100;
             document.getElementById('overallProgress').style.width = `${progress}%`;
-            document.getElementById('progressText').textContent = `第 ${appState.currentLevel} / ${CONFIG.TOTAL_LEVELS} 关`;
+            document.getElementById('progressText').textContent = `已完成 ${completedCount} / ${CONFIG.TOTAL_LEVELS} 关`;
         }
 
         function renderLevelNav() {
             const nav = document.getElementById('levelNav');
             nav.innerHTML = '';
 
+            let lastCategory = '';
+
             for (let i = 1; i <= CONFIG.TOTAL_LEVELS; i++) {
+                const levelInfo = levelData[i - 1];
+                
+                // 添加分类标签
+                if (levelInfo.category !== lastCategory) {
+                    const categoryLabel = document.createElement('div');
+                    categoryLabel.className = 'level-category-label';
+                    if (levelInfo.category === '基础') {
+                        categoryLabel.textContent = `${levelInfo.category}关卡 (1-20)`;
+                    } else if (levelInfo.category === '进阶') {
+                        categoryLabel.textContent = `${levelInfo.category}关卡 (21-37)`;
+                    } else if (levelInfo.category === '最终') {
+                        categoryLabel.textContent = `${levelInfo.category}关卡 (38-47)`;
+                    }
+                    nav.appendChild(categoryLabel);
+                    lastCategory = levelInfo.category;
+                }
+
                 const dot = document.createElement('div');
                 dot.className = 'level-dot';
                 dot.textContent = i;
+                dot.title = `${levelInfo.category} - ${levelInfo.yao}`;
 
-                if (i < appState.currentLevel) {
+                // 检查该关卡是否已完成
+                if (appState.userScores[i - 1] && appState.userScores[i - 1] >= CONFIG.PASS_SCORE) {
                     dot.classList.add('completed');
                 } else if (i === appState.currentLevel) {
                     dot.classList.add('current');
-                } else if (i === appState.currentLevel + 1) {
-                    dot.classList.add('available');
                 } else {
-                    dot.classList.add('locked');
+                    dot.classList.add('available');
                 }
 
+                // 所有关卡都可以点击
                 dot.onclick = () => {
-                    if (!dot.classList.contains('locked')) {
-                        appState.currentLevel = i;
-                        initLearningPage();
-                    }
+                    appState.currentLevel = i;
+                    initLearningPage();
                 };
 
                 nav.appendChild(dot);
@@ -1752,7 +1912,10 @@
             const level = levelData[appState.currentLevel - 1];
             document.getElementById('yaoText').textContent = level.yao;
             document.getElementById('chineseText').textContent = `${level.chinese}（${level.speed === 'slow' ? '慢速' : '正常语速'}）`;
-            document.getElementById('speedMode').textContent = level.speed === 'slow' ? '慢速模式 - 适合初学者' : '正常语速 - 标准发音';
+            
+            // 更新语速模式显示，包含关卡类别
+            const categoryEmoji = level.category === '基础' ? '🌱' : level.category === '进阶' ? '🌿' : '🌳';
+            document.getElementById('speedMode').textContent = `${categoryEmoji} ${level.category}关卡 - ${level.speed === 'slow' ? '慢速模式' : '正常语速'}`;
 
             document.getElementById('scoreSection').classList.remove('show');
             document.getElementById('nextLevelBtn').disabled = true;
@@ -1761,8 +1924,23 @@
         }
 
         function getAudioFilename(level) {
+            // 如果关卡有自定义音频文件名，直接使用
+            if (level.audioFile) {
+                return level.audioFile;
+            }
+            
+            // 否则使用默认的命名规则
             const group = level.group.toString().padStart(3, '0');
             const speed = level.speed === 'slow' ? '慢速' : '正常';
+            
+            // 根据关卡类别返回不同的文件名格式
+            if (level.category === '基础') {
+                return `基础发音-${group}-蓝靛瑶-${speed}.wav`;
+            } else if (level.category === '进阶') {
+                return `进阶发音-${group}-蓝靛瑶-${speed}.wav`;
+            } else if (level.category === '最终') {
+                return `最终发音-${group}-蓝靛瑶-${speed}.wav`;
+            }
             return `基础发音-${group}-蓝靛瑶-${speed}.wav`;
         }
 
@@ -1770,7 +1948,8 @@
             try {
                 const level = levelData[appState.currentLevel - 1];
                 const filename = getAudioFilename(level);
-                const response = await fetch(CONFIG.AUDIO_PATH + filename);
+                const audioPath = level.audioPath || CONFIG.AUDIO_PATH_BASE;
+                const response = await fetch(audioPath + filename);
                 const arrayBuffer = await response.arrayBuffer();
 
                 if (!appState.audioContext) {
@@ -1797,7 +1976,8 @@
                 } else {
                     const level = levelData[appState.currentLevel - 1];
                     const filename = getAudioFilename(level);
-                    const audio = new Audio(CONFIG.AUDIO_PATH + filename);
+                    const audioPath = level.audioPath || CONFIG.AUDIO_PATH_BASE;
+                    const audio = new Audio(audioPath + filename);
                     await audio.play();
                 }
             } catch (error) {
